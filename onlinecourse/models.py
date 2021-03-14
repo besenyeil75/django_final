@@ -126,7 +126,7 @@ class Question(models.Model):
 class Choice(models.Model):
     question_id = models.ForeignKey(Question, on_delete=models.CASCADE)
     chioce_text = models.CharField(max_length=1000)
-    is_correct = models.IntegerField(default=0)
+    is_correct = models.BooleanField(default=0)
 
 
 
